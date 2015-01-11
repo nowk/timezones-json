@@ -14,10 +14,10 @@ var groupsMap = exports.groupsMap = timezones.map(function(v) {
 });
 
 /*
- * group returns one or more groups based on the search
+ * group returns one or more time groups based on given names
  *
  * @param {String...}
- * @return {Object|Array}
+ * @return {Tg|Array} (if array, an array of Tgs)
  * @api public
  */
 
