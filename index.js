@@ -117,28 +117,6 @@ exports.group = function() {
  */
 
 function Tg(z) {
-  this.z = z;
+  this.name = z.group;
+  this.zones = z.zones;
 }
-
-/*
- * name returns the time group name
- *
- * @return {String}
- * @api public
- */
-
-Tg.prototype.name = function() {
-  return this.z.group;
-};
-
-/*
- * zones returns the collection of zones for this time group
- *
- * @return {Array}
- * @api public
- */
-
-Tg.prototype.zones = function() {
-  return this.z.zones;
-};
-
