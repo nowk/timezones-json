@@ -32,3 +32,33 @@ describe("group", function() {
   });
 });
 
+describe("zone", function() {
+  it("returns a zone by timezone name", function() {
+    [
+      "America/New_York",
+      "america/new_york"
+    ].forEach(function(v) {
+      var z = tz.zone(v);
+      assert.equal("America/New_York", z.value);
+      assert.equal("New York", z.name);
+    });
+  });
+
+  it("returns multiple zones by name", function() {
+    var z = tz.zone("America/new_York", "Asia/Seoul");
+    assert.lengthOf(z, 2);
+    assert.equal(z[0].name, "New York");
+    assert.equal(z[1].name, "Seoul");
+  });
+
+  it("does not return duplicate matching groups", function() {
+    var z = tz.zone("America/New_York", "America/New_York");
+    assert.equal(z.value, "America/New_York");
+    assert.equal(z.name, "New York");
+  });
+
+  it("returns ane emtpy array if no zones are found", function() {
+    var z = tz.zone("outer", "space");
+    assert.lengthOf(z, 0);
+  });
+});
