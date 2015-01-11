@@ -1,6 +1,13 @@
 /* jshint node: true */
 
-var timezones = require("./timezones");
+/*
+ * timezones returns the raw timezones list
+ *
+ * @return {Array}
+ * @api public
+ */
+
+var timezones = exports.timezones = require("./timezones");
 
 /*
  * groupsMap is a array map of the timezone group names for easier search
