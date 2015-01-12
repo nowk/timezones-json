@@ -1,6 +1,6 @@
 {
   "name": "timezones-json",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "JSON timezones list",
   "main": "index.js",
   "scripts": {
