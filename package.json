@@ -19,5 +19,9 @@
   "bugs": {
     "url": "https://github.com/damncarousel/timezones-json/issues"
   },
-  "homepage": "https://github.com/damncarousel/timezones-json"
+  "homepage": "https://github.com/damncarousel/timezones-json",
+  "devDependencies": {
+    "chai": "^1.10.0",
+    "mocha": "^2.1.0"
+  }
 }
